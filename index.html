@@ -1,98 +1,140 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title> Bold Step Company | 컨설팅 회사</title>
-  
-  <!-- ✅ SEO 메타태그 -->
-  <meta name="description" content="Bold Step은 디지털 전환, 신사업 개발, AI 전략 등 다양한 분야에서 기업의 성장을 지원하는 전략 컨설팅 회사입니다.">
-  <meta name="keywords" content="컨설팅, 전략, 디지털 전환, AI, 스타트업, Bold Step">
-  <meta name="author" content="Bold Step">
-  <meta property="og:title" content="Bold Step | 전략 컨설팅">
-  <meta property="og:description" content="미래를 디자인하는 전략 컨설팅 파트너.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://boldstep.github.io">
-  <meta property="og:image" content="https://boldstep.github.io/images/og-image.png"> <!-- 이미지 경로 필요시 수정 -->
-  <meta name="robots" content="index, follow">
-
-  <!-- ✅ Google Analytics v4 (GA4) -->
-  <!-- Replace 'G-XXXXXXXXXX' with your actual Measurement ID -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){ dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX'); // ← 여기를 본인의 ID로 교체
-  </script>
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bold Step | 전략 컨설팅</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
+    * {
       margin: 0;
       padding: 0;
-      background-color: #f5f7fa;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f9fbfd;
       color: #333;
-    }
-    header {
-      background-color: #1e2a38;
-      color: white;
-      padding: 2rem;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-    }
-    header p {
-      font-size: 1.2rem;
-      margin-top: 0.5rem;
-    }
-    section {
-      max-width: 800px;
-      margin: 2rem auto;
-      padding: 1rem;
-    }
-    section h2 {
-      color: #1e2a38;
-      font-size: 1.8rem;
-      margin-bottom: 0.5rem;
-    }
-    section p {
       line-height: 1.6;
     }
+
+    header {
+      background: linear-gradient(120deg, #1e2a38, #34495e);
+      color: #fff;
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      opacity: 0.85;
+    }
+
+    nav {
+      background-color: white;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav a {
+      color: #1e2a38;
+      text-decoration: none;
+      margin-left: 1rem;
+      font-weight: 600;
+    }
+
+    section {
+      padding: 3rem 2rem;
+      max-width: 900px;
+      margin: auto;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.6s ease;
+    }
+
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    h2 {
+      font-size: 2rem;
+      color: #1e2a38;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.05rem;
+      margin-bottom: 1.5rem;
+    }
+
     footer {
       text-align: center;
-      padding: 1rem;
-      background-color: #e0e4ea;
-      color: #666;
+      padding: 2rem;
+      background-color: #e8edf3;
       font-size: 0.9rem;
+      color: #666;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      nav a {
+        margin: 0.5rem 0;
+      }
     }
   </style>
 </head>
 <body>
+
+  <nav>
+    <div><strong>Bold Step</strong></div>
+    <div>
+      <a href="#about">회사 소개</a>
+      <a href="#services">서비스</a>
+      <a href="#vision">비전</a>
+      <a href="#contact">문의</a>
+    </div>
+  </nav>
 
   <header>
     <h1>Bold Step</h1>
     <p>미래를 디자인하는 전략 컨설팅 파트너</p>
   </header>
 
-  <section>
+  <section id="about">
     <h2>회사 소개</h2>
     <p>
-      Bold Step은 혁신과 실행을 중심에 둔 전략 컨설팅 회사입니다.<br>
-      디지털 전환, 신사업 개발, 조직 혁신 등 다양한 분야에서 기업의 지속 성장을 지원합니다.
-      대기업과 스타트업 기업 자문 및 코칭을 등 고객의 성장을 지원합니다.  
+      Bold Step은 혁신과 실행을 중심에 둔 전략 컨설팅 회사입니다.<br />
+      디지털 전환, 신사업 개발, 조직 혁신 등 다양한 분야에서<br />
+      고객의 지속 성장을 실현하는 파트너가 되겠습니다.
     </p>
   </section>
 
-  <section>
+  <section id="services">
     <h2>주요 서비스</h2>
     <p>
-      - 디지털 전략 수립 및 실행<br>
-      - 스타트업/중견기업 성장 전략<br>
-      - AI 기반 비즈니스 혁신<br>
-      - 투자 및 인큐베이션 자문<br>
+      • 디지털 전략 수립 및 실행<br />
+      • 스타트업 및 중견기업 성장 전략<br />
+      • AI 기반 비즈니스 혁신 자문<br />
+      • 투자 및 인큐베이션 전략 컨설팅
     </p>
   </section>
 
@@ -105,7 +147,6 @@
     </p>
   </section>
 
-  
   <section>
     <h2>연락처</h2>
     <p>
@@ -113,10 +154,11 @@
       위치: 경기도 용인시 수지구 포은대로59번길 37 <br>
     </p>
   </section>
-
+  
   <footer>
-    &copy; 2025 Bold Step Company. All rights reserved.
+    &copy; 2025 Bold Step. All rights reserved.
   </footer>
+
   <script>
     // 간단한 스크롤 애니메이션 효과
     const sections = document.querySelectorAll("section");
@@ -133,5 +175,6 @@
       observer.observe(section);
     });
   </script>
+
 </body>
 </html>
